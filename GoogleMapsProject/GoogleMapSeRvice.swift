@@ -8,7 +8,7 @@ import  CoreLocation
 import GoogleMaps
 
 class GoogleMapSeRvice: UIViewController,CLLocationManagerDelegate {
-      
+        
      @IBOutlet weak var myView: UIView!
     let locationManager = CLLocationManager()
     var mapView = GMSMapView()
