@@ -11,8 +11,7 @@ class GoogleMapSeRvice: UIViewController,CLLocationManagerDelegate {
         
      @IBOutlet weak var myView: UIView!
     let locationManager = CLLocationManager()
-    var mapView = GMSMapView()
-    var camera = GMSCameraPosition()
+   
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,7 +30,7 @@ class GoogleMapSeRvice: UIViewController,CLLocationManagerDelegate {
         mapView.settings.myLocationButton = true
         mapView.isMyLocationEnabled = true
         let marker = GMSMarker()
-        /* Todays code - starts here */
+       
         let markerImage = UIImage(named: "bike3")!
         //creating a marker view
         let markerView = UIImageView(image: markerImage)
@@ -43,8 +42,9 @@ class GoogleMapSeRvice: UIViewController,CLLocationManagerDelegate {
 
         //comment this line if you don't wish to put a callout bubble
         mapView.selectedMarker = marker
-        /* Todays code - ends here */
+       
          marker.position = camera.target
+         marker.snippet = "Users Current Location"
          self.myView.addSubview(mapView)
                 
 
